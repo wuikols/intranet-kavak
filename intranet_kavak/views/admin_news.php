@@ -27,7 +27,7 @@ $isSuperAdmin = strpos($rol_nombre, 'SUPER') !== false;
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-    <link rel="stylesheet" href="/intranet_kavak/assets/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css?v=<?php echo time(); ?>">
     
     <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
     
@@ -144,7 +144,7 @@ endif; ?>
                             <tr class="news-row" data-search="<?php echo $searchString; ?>">
                                 <td style="font-weight:700; color:var(--text-main);"><?php echo htmlspecialchars($n['titulo']); ?></td>
                                 <td><span class="badge-news <?php echo $class; ?>"><?php echo $n['tipo']; ?></span></td>
-                                <td><div style="display:flex; align-items:center; gap:8px;"><img src="/intranet_kavak/assets/uploads/profiles/<?php echo $n['foto_perfil'] ?? 'default.png'; ?>" style="width:24px; height:24px; border-radius:50%;"> <?php echo htmlspecialchars($n['autor_nombre']); ?></div></td>
+                                <td><div style="display:flex; align-items:center; gap:8px;"><img src="<?php echo BASE_URL; ?>assets/uploads/profiles/<?php echo $n['foto_perfil'] ?? 'default.png'; ?>" style="width:24px; height:24px; border-radius:50%;"> <?php echo htmlspecialchars($n['autor_nombre']); ?></div></td>
                                 <td style="color:var(--text-secondary); font-size:13px;"><?php echo date('d/m/Y H:i', strtotime($n['creado_en'])); ?></td>
                                 <td style="text-align:right;">
                                     <div class="action-btns" style="justify-content:flex-end;">

@@ -14,8 +14,13 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// CONSTANTE GLOBAL DE RUTAS PARA EVITAR "HARDCODING"
-define('BASE_URL', '/intranet_kavak/');
+$isLocalhost = (isset($_SERVER['HTTP_HOST']) && (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false || strpos($_SERVER['HTTP_HOST'], '127.0.0.1') !== false));
+if ($isLocalhost) {
+    define('BASE_URL', '/intranet_kavak/');
+}
+else {
+    define('BASE_URL', '/');
+}
 
 // 2. IMPORTACIÓN DE MODELOS Y CONTROLADORES
 require_once 'config/database.php';

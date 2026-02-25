@@ -6,6 +6,10 @@
     },
     "routes": [
         {
+            "src": "/intranet_kavak/assets/(.*)",
+            "dest": "/assets/$1"
+        },
+        {
             "src": "/assets/(.*)",
             "dest": "/assets/$1"
         },

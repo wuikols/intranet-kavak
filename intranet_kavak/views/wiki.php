@@ -40,7 +40,7 @@ $isAdmin = strpos($rol_nombre, 'ADMIN') !== false || strpos($rol_nombre, 'SUPER'
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.5/purify.min.js"></script>
-    <link rel="stylesheet" href="/intranet_kavak/assets/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css?v=<?php echo time(); ?>">
     <style>
         /* Estilos Base Sidebar */
         .sidebar-footer { margin-top: auto; padding: 20px; border-top: 1px solid rgba(255,255,255,0.05); }
@@ -157,11 +157,11 @@ endforeach; ?>
                     <div class="articles-scroller">
                         <div class="articles-container" id="articlesGrid">
                         <?php foreach ($articles as $art):
-    $cover = $art['imagen_portada'] ? $art['imagen_portada'] : '/intranet_kavak/assets/img/wiki_default.jpg';
+    $cover = $art['imagen_portada'] ? $art['imagen_portada'] : '<?php echo BASE_URL; ?>assets/img/wiki_default.jpg';
     $searchData = strtolower($art['titulo'] . ' ' . $art['contenido']);
 ?>
                         <div class="article-card" data-cat="<?php echo $art['categoria_id']; ?>" data-search="<?php echo htmlspecialchars($searchData, ENT_QUOTES); ?>" onclick="openArticle(<?php echo htmlspecialchars(json_encode($art), ENT_QUOTES, 'UTF-8'); ?>)">
-                            <img src="<?php echo $cover; ?>" class="art-cover" onerror="this.src='/intranet_kavak/assets/img/wiki_default.jpg'">
+                            <img src="<?php echo $cover; ?>" class="art-cover" onerror="this.src='<?php echo BASE_URL; ?>assets/img/wiki_default.jpg'">
                             <div class="art-body">
                                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:5px;">
                                     <span class="art-cat" style="margin-bottom:0;"><?php echo htmlspecialchars($art['categoria_nombre']); ?></span>

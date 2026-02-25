@@ -32,7 +32,7 @@ $isSuperAdmin = strpos($rol_nombre, 'SUPER') !== false;
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <link rel="stylesheet" href="/intranet_kavak/assets/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css?v=<?php echo time(); ?>">
 
     <style>
         :root { --primary-color: #0056b3; --success-color: #28a745; --purple-color: #4c0bce; --bg-color-cot: #f4f4f9; }

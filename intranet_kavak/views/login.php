@@ -28,7 +28,7 @@
         /* LADO IZQUIERDO: BRANDING E IMAGEN */
         .brand-side {
             position: relative;
-            background: linear-gradient(135deg, rgba(15,23,42,0.9) 0%, rgba(37,99,235,0.8) 100%), url('/intranet_kavak/assets/img/Kavak_Lerma.jpeg');
+            background: linear-gradient(135deg, rgba(15,23,42,0.9) 0%, rgba(37,99,235,0.8) 100%), url('<?php echo BASE_URL; ?>assets/img/Kavak_Lerma.jpeg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -115,7 +115,7 @@
     <div class="login-wrapper">
         <div class="brand-side">
             <div class="brand-content">
-                <img src="/intranet_kavak/assets/img/LogoLetraBlanca.png" alt="Kavak OS" style="width: 160px; margin-bottom: 30px;">
+                <img src="<?php echo BASE_URL; ?>assets/img/LogoLetraBlanca.png" alt="Kavak OS" style="width: 160px; margin-bottom: 30px;">
                 <h1>Tu ecosistema digital de trabajo.</h1>
                 <p>Accede a todas las herramientas, comunicaciones y procesos de Kavak en una sola plataforma unificada y segura.</p>
             </div>
@@ -128,7 +128,7 @@
         <div class="form-side">
             <div class="form-container">
                 <div class="login-header">
-                    <img src="/intranet_kavak/assets/img/LogoLetraNegra.png" alt="Kavak Logo" class="login-logo">
+                    <img src="<?php echo BASE_URL; ?>assets/img/LogoLetraNegra.png" alt="Kavak Logo" class="login-logo">
                     <h2 class="login-title">¡Hola de nuevo!</h2>
                     <p class="login-subtitle">Ingresa tus credenciales corporativas para continuar.</p>
                 </div>

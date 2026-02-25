@@ -40,7 +40,7 @@ $topbarBadgeStyle = 'background: rgba(139, 92, 246, 0.1); color: #8b5cf6; border
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
-    <link rel="stylesheet" href="/intranet_kavak/assets/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css?v=<?php echo time(); ?>">
 
     <style>
         /* ESTILOS ESPECÍFICOS PRAVIA */
@@ -89,7 +89,7 @@ $topbarBadgeStyle = 'background: rgba(139, 92, 246, 0.1); color: #8b5cf6; border
             <section class="content-area" style="padding-top: 20px;">
                 <div class="container mb-5">
                     <div class="main-card">
-                        <img src="/intranet_kavak/assets/img/LogoPravia.jpeg" alt="Logo Pravia" class="logo-img mb-4">
+                        <img src="<?php echo BASE_URL; ?>assets/img/LogoPravia.jpeg" alt="Logo Pravia" class="logo-img mb-4">
                         
                         <h2 class="text-center mb-4 fw-bold text-primary">Solicitud de Crédito Automotriz</h2>
                         
@@ -240,7 +240,7 @@ $topbarBadgeStyle = 'background: rgba(139, 92, 246, 0.1); color: #8b5cf6; border
     </div>
 
     <!-- MAIN APP SCRIPT FOR SIDEBAR -->
-    <script src="/intranet_kavak/assets/js/main.js?v=<?php echo time(); ?>"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/main.js?v=<?php echo time(); ?>"></script>
 
     <script>
         // --- DATOS ESTÁTICOS NECESARIOS (COMUNAS Y AUTOS) ---

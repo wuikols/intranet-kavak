@@ -37,7 +37,7 @@ foreach ($solicitudesList as $sol) {
     <title>Mis Solicitudes - Kavak OS</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/intranet_kavak/assets/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css?v=<?php echo time(); ?>">
     <style>
         .page-header { background: linear-gradient(135deg, #10B981 0%, #047857 100%); color: white; padding: 40px; border-radius: 24px; box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.5); margin-bottom: 30px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: space-between; }
         .page-header h1 { margin: 0; font-size: 32px; font-weight: 800; letter-spacing: -1px; }

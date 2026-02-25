@@ -36,7 +36,7 @@ $topbarBadgeStyle = 'background: rgba(139, 92, 246, 0.1); color: #8b5cf6; border
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
-    <link rel="stylesheet" href="/intranet_kavak/assets/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css?v=<?php echo time(); ?>">
 
     <style>
         :root { --primary-color: #0056b3; --success-color: #28a745; --bg-color-cot: #f4f4f9; }
@@ -353,7 +353,7 @@ include 'partials/topbar.php';
     </div>
 
     <!-- MAIN APP SCRIPT FOR SIDEBAR -->
-    <script src="/intranet_kavak/assets/js/main.js?v=<?php echo time(); ?>"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/main.js?v=<?php echo time(); ?>"></script>
 
     <script>
         const formatCLP = (num) => new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP', maximumFractionDigits: 0 }).format(num);

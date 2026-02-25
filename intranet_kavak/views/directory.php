@@ -32,7 +32,7 @@ $isSuperAdmin = strpos($rol_nombre, 'SUPER') !== false;
     <title>Directorio - Kavak OS</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/intranet_kavak/assets/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css?v=<?php echo time(); ?>">
     <style>
         /* Reutilizamos estilos base para consistencia */
         .sidebar-footer { margin-top: auto; padding: 20px; border-top: 1px solid rgba(255,255,255,0.05); }
@@ -85,7 +85,7 @@ include 'partials/topbar.php';
     // Evitar mostrar al usuario 'admin' genérico si se desea, o usuarios inactivos
     // Preparamos datos de búsqueda
     $searchData = strtolower($u['nombre'] . ' ' . $u['apellido'] . ' ' . $u['cargo_nombre'] . ' ' . $u['sucursal_nombre'] . ' ' . $u['email']);
-    $foto = $u['foto_perfil'] ? '/intranet_kavak/assets/uploads/profiles/' . $u['foto_perfil'] : '/intranet_kavak/assets/uploads/profiles/default.png';
+    $foto = $u['foto_perfil'] ? '<?php echo BASE_URL; ?>assets/uploads/profiles/' . $u['foto_perfil'] : '<?php echo BASE_URL; ?>assets/uploads/profiles/default.png';
 ?>
                     <div class="user-card" data-search="<?php echo $searchData; ?>">
                         <?php if ($u['id'] != $_SESSION['user_id']): ?>

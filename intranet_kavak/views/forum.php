@@ -40,7 +40,7 @@ $isAdmin = strpos($rol_nombre, 'ADMIN') !== false || strpos($rol_nombre, 'SUPER'
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.5/purify.min.js"></script>
-    <link rel="stylesheet" href="/intranet_kavak/assets/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css?v=<?php echo time(); ?>">
     <style>
         /* Sidebar Styles (Consistentes) */
         .sidebar-footer { margin-top: auto; padding: 20px; border-top: 1px solid rgba(255,255,255,0.05); }
@@ -167,7 +167,7 @@ endforeach; ?>
 
                     <div id="topicsFeed" class="topics-scroller">
                         <?php foreach ($topics as $topic):
-    $avatar = $topic['es_anonimo'] ? '/intranet_kavak/assets/img/anon.png' : ($topic['foto_perfil'] ? '/intranet_kavak/assets/uploads/profiles/' . $topic['foto_perfil'] : '/intranet_kavak/assets/uploads/profiles/default.png');
+    $avatar = $topic['es_anonimo'] ? '<?php echo BASE_URL; ?>assets/img/anon.png' : ($topic['foto_perfil'] ? '<?php echo BASE_URL; ?>assets/uploads/profiles/' . $topic['foto_perfil'] : '<?php echo BASE_URL; ?>assets/uploads/profiles/default.png');
     $authorName = $topic['es_anonimo'] ? 'Anónimo' : $topic['autor_nombre'] . ' ' . $topic['autor_apellido'];
     $searchData = strtolower($topic['titulo'] . ' ' . $topic['contenido']);
 ?>
@@ -220,7 +220,7 @@ endif; ?>
             <div class="mc-scroll" id="topicDetailContent"></div>
 
             <div class="comment-box">
-                <img src="/intranet_kavak/assets/uploads/profiles/<?php echo htmlspecialchars($foto_perfil); ?>" style="width:35px; height:35px; border-radius:50%;">
+                <img src="<?php echo BASE_URL; ?>assets/uploads/profiles/<?php echo htmlspecialchars($foto_perfil); ?>" style="width:35px; height:35px; border-radius:50%;">
                 <input type="hidden" id="currentTopicId">
                 <textarea id="commentInput" class="comment-input" placeholder="Escribe un comentario..."></textarea>
                 <div style="display:flex; flex-direction:column; gap:5px;">
@@ -366,7 +366,7 @@ endif; ?>
             }
             const container = document.getElementById('topicDetailContent');
             
-            let avatar = topic.es_anonimo == 1 ? '/intranet_kavak/assets/img/anon.png' : (topic.foto_perfil ? '/intranet_kavak/assets/uploads/profiles/' + topic.foto_perfil : '/intranet_kavak/assets/uploads/profiles/default.png');
+            let avatar = topic.es_anonimo == 1 ? '<?php echo BASE_URL; ?>assets/img/anon.png' : (topic.foto_perfil ? '<?php echo BASE_URL; ?>assets/uploads/profiles/' + topic.foto_perfil : '<?php echo BASE_URL; ?>assets/uploads/profiles/default.png');
             let name = topic.es_anonimo == 1 ? 'Anónimo' : topic.autor_nombre + ' ' + topic.autor_apellido;
             
             let html = `
@@ -415,7 +415,7 @@ endif; ?>
                     document.getElementById('commentInput').value = '';
                     const list = document.getElementById('commentsList');
                     if(list.innerText.includes('Cargando')) list.innerHTML = '';
-                    let ava = anon ? '/intranet_kavak/assets/img/anon.png' : '<?php echo "/intranet_kavak/assets/uploads/profiles/" . $foto_perfil; ?>';
+                    let ava = anon ? '<?php echo BASE_URL; ?>assets/img/anon.png' : '<?php echo "<?php echo BASE_URL; ?>assets/uploads/profiles/" . $foto_perfil; ?>';
                     let nom = anon ? 'Anónimo' : '<?php echo $currentUser['nombre'] . " " . $currentUser['apellido']; ?>';
                     list.innerHTML += `<div class="comment-item"><img src="${ava}" style="width:35px; height:35px; border-radius:50%;"><div class="comment-bubble"><div class="comment-meta"><span>${nom}</span> <span>Ahora</span></div><div style="color:var(--text-main); font-size:14px;">${DOMPurify.sanitize(txt)}</div></div></div>`;
                 }

@@ -7,7 +7,7 @@ $moduleColaboracion = ['directory', 'wiki', 'forum'];
 $moduleAdmin = ['admin_news', 'admin_tips', 'admin_users', 'admin_company'];
 ?>
 <aside class="sidebar" id="sidebar">
-    <div class="sidebar-header"><img src="/intranet_kavak/assets/img/LogoLetraBlanca.png" style="width: 130px !important;"></div>
+    <div class="sidebar-header"><img src="<?php echo BASE_URL; ?>assets/img/LogoLetraBlanca.png" style="width: 130px !important;"></div>
     <nav class="sidebar-menu">
         
         <ul style="padding: 0; margin-bottom: 5px; list-style: none;">

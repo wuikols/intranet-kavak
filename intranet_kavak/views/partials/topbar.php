@@ -98,7 +98,7 @@ endif; ?>
             </span>
 
             <!-- User Avatar & Actions -->
-            <a href="index.php?action=profile"><img src="/intranet_kavak/assets/uploads/profiles/<?php echo htmlspecialchars($localFotoPerfil); ?>" class="avatar-small" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--card-bg);"></a>
+            <a href="index.php?action=profile"><img src="<?php echo BASE_URL; ?>assets/uploads/profiles/<?php echo htmlspecialchars($localFotoPerfil); ?>" class="avatar-small" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--card-bg);"></a>
             <a href="index.php?action=logout" style="color: #EF4444; font-size: 18px; margin-left:10px;" title="Cerrar Sesión"><i class="fas fa-sign-out-alt"></i></a>
         </div>
     </div>

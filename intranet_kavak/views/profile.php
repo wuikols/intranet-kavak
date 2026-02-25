@@ -50,7 +50,7 @@ $isSuperAdmin = strpos($rol_nombre, 'SUPER') !== false;
     <title>Mi Perfil - Kavak OS</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/intranet_kavak/assets/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css?v=<?php echo time(); ?>">
     <style>
         /* (Copia aquí los estilos CSS del archivo anterior para mantener el diseño igual) */
         /* ... Estilos Sidebar, Topbar, Expediente, Grids ... */
@@ -157,14 +157,14 @@ include 'partials/topbar.php';
                         <div class="profile-side-card">
                             <div class="profile-id-header">
                                 <i class="fas fa-id-badge" style="font-size:30px; opacity:0.2; position:absolute; top:20px; left:20px;"></i>
-                                <img src="/intranet_kavak/assets/img/LogoLetraBlanca.png" class="kavak-logo-watermark">
+                                <img src="<?php echo BASE_URL; ?>assets/img/LogoLetraBlanca.png" class="kavak-logo-watermark">
                                 <div style="font-size:10px; font-weight:800; letter-spacing:1px; text-transform:uppercase; margin-bottom:5px; opacity:0.8;">Kavak ID</div>
                                 <div style="font-weight:600; font-size:14px;"><?php echo htmlspecialchars($currentUser['rut']); ?></div>
                             </div>
                             
                             <div class="profile-side-body">
                                 <div class="avatar-wrapper">
-                                    <img src="/intranet_kavak/assets/uploads/profiles/<?php echo htmlspecialchars($foto_perfil); ?>" class="avatar-lg" id="avatarPreview">
+                                    <img src="<?php echo BASE_URL; ?>assets/uploads/profiles/<?php echo htmlspecialchars($foto_perfil); ?>" class="avatar-lg" id="avatarPreview">
                                     <label for="avatarUpload" class="btn-change-photo" title="Cambiar Foto de Perfil" id="btnChangePhoto"><i class="fas fa-camera"></i></label>
                                     <input type="file" name="foto_perfil" id="avatarUpload" style="display:none;" accept="image/png, image/jpeg, image/webp">
                                 </div>
@@ -312,7 +312,7 @@ endif; ?>
 else: ?>
                                 <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:15px;">
                                     <?php foreach ($kudosRecibidos as $kudo):
-        $fotoKudo = $kudo['emisor_foto'] ? '/intranet_kavak/assets/uploads/profiles/' . $kudo['emisor_foto'] : '/intranet_kavak/assets/uploads/profiles/default.png';
+        $fotoKudo = $kudo['emisor_foto'] ? '<?php echo BASE_URL; ?>assets/uploads/profiles/' . $kudo['emisor_foto'] : '<?php echo BASE_URL; ?>assets/uploads/profiles/default.png';
 ?>
                                     <div style="background:rgba(245,158,11,0.05); border:1px solid rgba(245,158,11,0.2); border-radius:12px; padding:15px; display:flex; gap:15px;">
                                         <div style="font-size:24px; color:#F59E0B;"><i class="fas fa-<?php echo htmlspecialchars($kudo['insignia']); ?>"></i></div>
