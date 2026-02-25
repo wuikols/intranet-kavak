@@ -11,8 +11,9 @@ class Database
     {
         $this->conn = null;
         try {
-            // TiDB Serverless requires port 4000 and SSL connection
+            // TiDB Serverless requires port 4000 and STRICT SSL connection
             $options = array(
+                PDO::MYSQL_ATTR_SSL_CA => __DIR__ . '/cacert.pem',
                 PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
             );
             $this->conn = new PDO("mysql:host=" . $this->host . ";port=4000;dbname=" . $this->db_name, $this->username, $this->password, $options);
