@@ -3,7 +3,7 @@ class Database
 {
     private $host = "gateway01.us-east-1.prod.aws.tidbcloud.com";
     private $db_name = "github_sample";
-    private $username = "2px7t9j3rxyEpdk.root";
+    private $username = "2px7ti93rxyEpdk.root";
     private $password = "y8bmUpRWRnqH20xV";
     public $conn;
 
